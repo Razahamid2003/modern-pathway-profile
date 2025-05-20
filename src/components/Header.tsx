@@ -33,8 +33,8 @@ const Header: React.FC = () => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "py-4 bg-portfolio-navy/90 backdrop-blur-sm shadow-md" 
-          : "py-6 bg-transparent"
+          ? "py-4 bg-white shadow-md" 
+          : "py-6 bg-white"
       }`}
     >
       <div className="container-custom flex items-center justify-between">
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="font-mono text-sm text-portfolio-lightSlate hover:text-portfolio-highlight transition-colors"
+                  className="font-mono text-sm text-portfolio-slate hover:text-portfolio-highlight transition-colors"
                 >
                   <span className="text-portfolio-highlight">{`0${i + 1}.`}</span> {link.name}
                 </a>
@@ -77,14 +77,14 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-portfolio-lightNavy z-40 pt-24">
+        <div className="md:hidden fixed inset-0 bg-white z-40 pt-24">
           <nav className="container-custom">
             <ul className="flex flex-col items-center gap-8">
               {navLinks.map((link, i) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="font-mono text-lg text-portfolio-lightSlate hover:text-portfolio-highlight transition-colors"
+                    className="font-mono text-lg text-portfolio-slate hover:text-portfolio-highlight transition-colors"
                     onClick={toggleMenu}
                   >
                     <span className="text-portfolio-highlight">{`0${i + 1}.`}</span> {link.name}

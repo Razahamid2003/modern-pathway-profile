@@ -16,7 +16,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-portfolio-navy">
+    <section id="about" className="py-24 bg-white">
       <div className="container-custom">
         <div className="flex items-center gap-4 mb-12">
           <h2 className="section-title inline-block">01.</h2>
@@ -42,12 +42,12 @@ const About: React.FC = () => {
             </p>
             
             <div>
-              <h3 className="text-portfolio-lightSlate font-medium mb-3">
+              <h3 className="text-portfolio-black font-medium mb-3">
                 Here are a few technologies I've been working with recently:
               </h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
-                  <Badge key={skill} className="bg-portfolio-lightNavy text-portfolio-lightSlate hover:bg-portfolio-lightNavy/70">
+                  <Badge key={skill} className="bg-white text-portfolio-slate border border-portfolio-highlight hover:bg-portfolio-highlight hover:text-white">
                     {skill}
                   </Badge>
                 ))}
@@ -59,9 +59,9 @@ const About: React.FC = () => {
             <div className="relative w-full aspect-square rounded overflow-hidden group">
               <div className="absolute inset-0 bg-portfolio-highlight/20 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
               <div className="absolute inset-0 border-2 border-portfolio-highlight rounded translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
-              <div className="w-full h-full bg-portfolio-slate/20 overflow-hidden rounded">
+              <div className="w-full h-full bg-white overflow-hidden rounded">
                 {/* Replace with your actual image */}
-                <div className="w-full h-full bg-portfolio-lightNavy flex items-center justify-center text-portfolio-highlight">
+                <div className="w-full h-full bg-portfolio-navy flex items-center justify-center text-portfolio-highlight">
                   <span className="font-mono">Your Image</span>
                 </div>
               </div>

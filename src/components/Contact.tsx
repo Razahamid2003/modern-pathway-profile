@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
       <div className="container-custom">
         <div className="max-w-2xl mx-auto text-center">
           <p className="section-title">04. What's Next?</p>
-          <h2 className="heading-md">Get In Touch</h2>
+          <h2 className="heading-md text-portfolio-white">Get In Touch</h2>
           
           <p className="text-portfolio-white mb-12">
             I'm currently looking for new opportunities. Whether you have a question or just want to say hi,

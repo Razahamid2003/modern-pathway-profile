@@ -64,7 +64,7 @@ const Projects: React.FC = () => {
   const otherProjects = projects.filter(project => !project.featured);
   
   return (
-    <section id="projects" className="py-24 bg-portfolio-navy">
+    <section id="projects" className="py-24 bg-white">
       <div className="container-custom">
         <div className="flex items-center gap-4 mb-12">
           <h2 className="section-title inline-block">03.</h2>
@@ -86,7 +86,7 @@ const Projects: React.FC = () => {
                   ? 'md:order-1' 
                   : 'md:order-2'
               }`}>
-                <div className="h-full w-full bg-portfolio-highlight/20 rounded"></div>
+                <div className="h-full w-full bg-portfolio-navy rounded"></div>
               </div>
               
               <div className={`md:col-span-5 ${
@@ -95,15 +95,15 @@ const Projects: React.FC = () => {
                   : 'md:order-1'
               }`}>
                 <p className="section-title">Featured Project</p>
-                <h3 className="text-2xl font-bold text-portfolio-lightSlate mb-4">{project.title}</h3>
-                <div className="bg-portfolio-lightNavy p-6 rounded shadow-xl mb-4">
+                <h3 className="text-2xl font-bold text-portfolio-black mb-4">{project.title}</h3>
+                <div className="bg-white p-6 rounded shadow-xl mb-4 border border-portfolio-navy/10">
                   <p className="text-portfolio-slate">{project.description}</p>
                 </div>
                 <div className={`flex flex-wrap gap-2 mb-6 ${
                   index % 2 === 0 ? '' : 'md:justify-end'
                 }`}>
                   {project.tags.map(tag => (
-                    <Badge key={tag} className="bg-transparent text-portfolio-lightSlate border border-portfolio-lightNavy">
+                    <Badge key={tag} className="bg-transparent text-portfolio-slate border border-portfolio-highlight">
                       {tag}
                     </Badge>
                   ))}
@@ -112,12 +112,12 @@ const Projects: React.FC = () => {
                   index % 2 === 0 ? '' : 'md:justify-end'
                 }`}>
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-lightSlate hover:text-portfolio-highlight">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                       <Github size={20} />
                     </a>
                   )}
                   {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-lightSlate hover:text-portfolio-highlight">
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                       <ExternalLink size={20} />
                     </a>
                   )}
@@ -131,28 +131,28 @@ const Projects: React.FC = () => {
         <h3 className="heading-md text-xl font-bold text-center mb-12">Other Noteworthy Projects</h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {otherProjects.map(project => (
-            <Card key={project.title} className="bg-portfolio-lightNavy border-portfolio-lightNavy hover:-translate-y-2 transition-transform duration-300">
+            <Card key={project.title} className="bg-white border-portfolio-navy/10 hover:-translate-y-2 transition-transform duration-300 shadow-md">
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-6">
                   <Folder size={32} className="text-portfolio-highlight" />
                   <div className="flex gap-4">
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-lightSlate hover:text-portfolio-highlight">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                         <Github size={18} />
                       </a>
                     )}
                     {project.liveLink && (
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-lightSlate hover:text-portfolio-highlight">
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                         <ExternalLink size={18} />
                       </a>
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-portfolio-lightSlate mb-3">{project.title}</h3>
+                <h3 className="text-xl font-bold text-portfolio-black mb-3">{project.title}</h3>
                 <p className="text-portfolio-slate mb-6">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map(tag => (
-                    <span key={tag} className="text-xs text-portfolio-lightSlate font-mono">
+                    <span key={tag} className="text-xs text-portfolio-slate font-mono">
                       {tag}
                     </span>
                   ))}

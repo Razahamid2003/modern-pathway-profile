@@ -56,17 +56,17 @@ const Experience: React.FC = () => {
       <div className="container-custom">
         <div className="flex items-center gap-4 mb-12">
           <h2 className="section-title inline-block">02.</h2>
-          <h2 className="heading-md inline-block m-0">Where I've Worked</h2>
-          <div className="h-px bg-portfolio-lightNavy flex-grow"></div>
+          <h2 className="heading-md inline-block m-0 text-portfolio-white">Where I've Worked</h2>
+          <div className="h-px bg-portfolio-white/30 flex-grow"></div>
         </div>
 
         <Tabs defaultValue={jobs[0].company} className="max-w-3xl">
-          <TabsList className="bg-transparent border-l border-portfolio-lightNavy h-auto flex-col space-x-0 space-y-0 w-full sm:w-auto">
+          <TabsList className="bg-transparent border-l border-portfolio-white/30 h-auto flex-col space-x-0 space-y-0 w-full sm:w-auto">
             {jobs.map((job) => (
               <TabsTrigger
                 key={job.company}
                 value={job.company}
-                className="font-mono text-sm rounded-none border-l-2 border-transparent data-[state=active]:border-portfolio-highlight data-[state=active]:bg-portfolio-lightNavy/30 data-[state=active]:text-portfolio-highlight h-12 justify-start px-5"
+                className="font-mono text-sm rounded-none border-l-2 border-transparent data-[state=active]:border-portfolio-highlight data-[state=active]:bg-portfolio-navy/90 data-[state=active]:text-portfolio-highlight h-12 justify-start px-5 text-white"
               >
                 {job.company}
               </TabsTrigger>
@@ -74,7 +74,7 @@ const Experience: React.FC = () => {
           </TabsList>
           {jobs.map((job) => (
             <TabsContent key={job.company} value={job.company} className="mt-8 px-6">
-              <h3 className="text-xl font-semibold text-portfolio-lightSlate mb-1">
+              <h3 className="text-xl font-semibold text-white mb-1">
                 {job.title} 
                 {job.url && (
                   <a 
@@ -89,10 +89,10 @@ const Experience: React.FC = () => {
                 )}
                 <span className="text-portfolio-highlight"> @ {job.company}</span>
               </h3>
-              <p className="font-mono text-sm text-portfolio-slate mb-4">{job.period}</p>
+              <p className="font-mono text-sm text-portfolio-white/80 mb-4">{job.period}</p>
               <ul className="space-y-3">
                 {job.description.map((item, i) => (
-                  <li key={i} className="flex gap-2 text-portfolio-slate">
+                  <li key={i} className="flex gap-2 text-portfolio-white/90">
                     <span className="text-portfolio-highlight mt-1.5 shrink-0">▹</span>
                     <span>{item}</span>
                   </li>
