@@ -24,28 +24,28 @@ const DynamicBackground: React.FC = () => {
     // Set canvas size to match window
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = window.innerHeight * 2; // Make it taller to cover the entire page
     };
     
     setCanvasSize();
     window.addEventListener("resize", setCanvasSize);
     
     // Create circles
-    const circleCount = 8;
+    const circleCount = 12; // Increase number of circles
     const circles: Circle[] = [];
     
-    const colors = ["#0A192F", "#D4AF37"];
+    const colors = ["#0A192F", "#D4AF37", "#112240"];
     
     for (let i = 0; i < circleCount; i++) {
-      const radius = Math.random() * 120 + 60;
+      const radius = Math.random() * 150 + 80; // Make circles larger
       circles.push({
         x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
+        y: Math.random() * window.innerHeight * 2, // Distribute across the full height
         radius,
-        dx: (Math.random() - 0.5) * 0.2,
-        dy: (Math.random() - 0.5) * 0.2,
+        dx: (Math.random() - 0.5) * 0.3, // Slightly faster movement
+        dy: (Math.random() - 0.5) * 0.3,
         color: colors[i % colors.length],
-        opacity: Math.random() * 0.08 + 0.02,
+        opacity: Math.random() * 0.12 + 0.05, // Increase opacity
       });
     }
     
@@ -88,7 +88,7 @@ const DynamicBackground: React.FC = () => {
     <canvas 
       ref={canvasRef} 
       className="fixed inset-0 z-0 pointer-events-none"
-      style={{ filter: "blur(50px)" }}
+      style={{ filter: "blur(40px)" }} // Slightly less blur to make circles more visible
     />
   );
 };

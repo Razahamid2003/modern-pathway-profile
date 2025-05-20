@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center pt-20 pb-16 bg-white relative overflow-hidden"
+      className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden"
     >      
       <div className="container-custom relative z-10">
         <p className="section-title opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
