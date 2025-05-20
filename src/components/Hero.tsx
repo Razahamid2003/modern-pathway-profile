@@ -6,16 +6,8 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center pt-20 pb-16 bg-white relative overflow-hidden"
+      className="min-h-screen flex items-center pt-20 pb-16 bg-transparent relative overflow-hidden"
     >
-      {/* Marble-inspired background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-2/3 h-full bg-portfolio-navy/10 rounded-bl-[100%] transform translate-x-1/4 -translate-y-1/4"></div>
-        <div className="absolute bottom-1/3 left-0 w-1/2 h-64 bg-portfolio-highlight/10 rounded-tr-[100%]"></div>
-        <div className="absolute bottom-0 right-1/4 w-72 h-72 border-2 border-portfolio-highlight/20 rounded-full"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 border border-portfolio-navy/10 rounded-full"></div>
-      </div>
-      
       <div className="container-custom relative z-10">
         <p className="section-title opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           Hi, my name is
