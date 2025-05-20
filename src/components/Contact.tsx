@@ -4,11 +4,16 @@ import { Github, Linkedin, Mail, FileText } from "lucide-react";
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-portfolio-navy opacity-90 z-0"></div>
+    <section id="contact" className="py-24 bg-portfolio-navy relative overflow-hidden">
+      {/* Marble-inspired decorative elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-r from-portfolio-highlight/20 to-transparent"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-32 bg-portfolio-highlight/10 rounded-tl-full"></div>
+        <div className="absolute top-1/4 right-10 w-24 h-24 border border-portfolio-highlight/30 rounded-full"></div>
+      </div>
       
-      <div className="container-custom relative z-10">
-        <div className="max-w-2xl mx-auto text-center">
+      <div className="container-custom">
+        <div className="max-w-2xl mx-auto text-center relative z-10">
           <p className="section-title">04. What's Next?</p>
           <h2 className="heading-md text-white">Get In Touch</h2>
           
