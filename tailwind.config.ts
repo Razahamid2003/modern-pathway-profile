@@ -65,11 +65,11 @@ export default {
 				},
 				portfolio: {
 					navy: '#0A192F',
-					highlight: '#64FFDA',
+					highlight: '#D4AF37', // Changed from teal to gold
 					lightNavy: '#112240',
 					slate: '#8892B0',
 					lightSlate: '#CCD6F6',
-					white: '#E6F1FF',
+					white: '#FFFFFF', // Changed to pure white
 				}
 			},
 			fontFamily: {

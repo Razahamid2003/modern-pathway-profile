@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
           <p className="section-title">04. What's Next?</p>
           <h2 className="heading-md">Get In Touch</h2>
           
-          <p className="text-portfolio-slate mb-12">
+          <p className="text-portfolio-white mb-12">
             I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
             I'll do my best to get back to you!
           </p>
@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
               Say Hello
             </a>
             
-            <div className="pt-8 flex justify-center gap-8 text-portfolio-lightSlate">
+            <div className="pt-8 flex justify-center gap-8 text-portfolio-white">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-highlight transition-colors">
                 <Github size={24} />
                 <span className="sr-only">GitHub</span>
