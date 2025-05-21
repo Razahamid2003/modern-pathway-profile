@@ -21,10 +21,10 @@ const Hero: React.FC = () => {
           Hi, my name is
         </p>
         <h1 className="heading-lg opacity-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          John Doe.
+          Raza Hamid.
         </h1>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-portfolio-navy mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          I build things for the web.
+          I like to work on Artificial Intelligence.
         </h2>
         <div className="max-w-xl opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           <p className="text-portfolio-slate text-lg mb-12">
