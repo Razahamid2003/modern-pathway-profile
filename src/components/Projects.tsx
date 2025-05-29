@@ -26,14 +26,14 @@ const Projects: React.FC = () => {
       title: "Automated Daily News Sentiment Analysis Pipeline",
       description: "Spearheaded a Python pipeline using Scrapy, BeautifulSoup, and NLTK VADER to scrape 500+ news articles daily and auto-generate Matplotlib sentiment trend charts, cutting manual reporting time by 90% and delivering real-time media tone insights.",
       tags: ["Python", "Scrapy", "BeautifulSoup", "NLTK", "Data Analysis", "Automation"],
-      github: "#",
+      github: "https://github.com/Razahamid2003/LUMS-Projects/tree/main/LUMS%20Projects/Machine%20Learning%20(CS-438)/News%20Sentiment%20Analysis",
       featured: true,
     },
     {
       title: "N-Gram Language Model with GPT Principles",
       description: "Designed and implemented a LLM using N-grams inspired by GPT architecture principles. Developed a scalable Bigram-based text generation model, capable of producing coherent predictions and handling complex language patterns. Optimized performance with efficient training strategies, enhancing model speed and accuracy.",
       tags: ["Python", "NLP", "GPT", "Language Models", "Machine Learning"],
-      github: "#",
+      github: "https://github.com/Razahamid2003/LMKR-Projects",
       featured: true,
     },
     {
