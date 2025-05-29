@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="container-custom">
         <div className="text-center">
           <p className="text-portfolio-white text-sm font-mono">
-            Designed & Built by John Doe <span className="text-portfolio-highlight">©</span> {year}
+            Designed & Built by Raza Hamid <span className="text-portfolio-highlight">©</span> {year}
           </p>
         </div>
       </div>

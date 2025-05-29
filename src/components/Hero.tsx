@@ -28,8 +28,9 @@ const Hero: React.FC = () => {
         </h2>
         <div className="max-w-xl opacity-0 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           <p className="text-portfolio-slate text-lg mb-12">
-            I'm a software engineer specializing in building exceptional digital experiences.
-            Currently focusing on building accessible, human-centered products.
+            Results-driven Computer Science senior at LUMS specializing in AI/ML and NLP. 
+            Currently seeking a summer internship to innovate in generative AI, reinforcement learning, 
+            and predictive analytics at a leading tech company.
           </p>
           <a href="#projects" className="btn-primary inline-flex items-center gap-2 group">
             View my work

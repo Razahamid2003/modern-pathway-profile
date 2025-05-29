@@ -9,44 +9,41 @@ interface Job {
   period: string;
   description: string[];
   url?: string;
+  location: string;
 }
 
 const Experience: React.FC = () => {
   const jobs: Job[] = [
     {
-      company: "Tech Corp",
-      title: "Senior Frontend Engineer",
-      period: "January 2022 - Present",
-      url: "https://example.com",
+      company: "LMKR",
+      title: "AI Intern",
+      period: "07/2024 - 09/2024",
+      location: "Islamabad, Pakistan",
       description: [
-        "Led the development of a new customer dashboard using React, increasing user engagement by 40%",
-        "Architected and implemented a component library used across multiple product teams",
-        "Mentored junior developers through code reviews and pair programming sessions",
-        "Collaborated with designers to improve UI/UX and implement design system",
+        "Engineered cutting-edge AI models based on GPT architecture to develop advanced Large Language Models (LLMs) capable of generating high-quality textual content.",
+        "Leveraged pre-trained models to fine-tune and create custom solutions for real-world text generation applications, optimizing for scalability and accuracy.",
+        "Contributed to end-to-end model development, from conceptualization to deployment, enhancing AI-driven capabilities in text generation and natural language understanding."
       ],
     },
     {
-      company: "StartupX",
-      title: "Frontend Developer",
-      period: "March 2020 - December 2021",
-      url: "https://example.com",
+      company: "NESCOM",
+      title: "Cybersecurity Intern",
+      period: "06/2024 - 07/2024",
+      location: "Islamabad, Pakistan",
       description: [
-        "Developed and maintained multiple React applications with TypeScript",
-        "Implemented responsive designs and ensured cross-browser compatibility",
-        "Reduced bundle size by 35% through code splitting and lazy loading",
-        "Participated in agile development process with two-week sprint cycles",
+        "Gained hands-on experience in Windows system file management using C#, mastering essential system-level programming techniques.",
+        "Engineered a TCP server-client communication framework, enabling seamless data transfer between client devices and a central server.",
+        "Developed and deployed an intuitive Windows Forms application that automates device scans for missing applications and reports results to a server, demonstrating expertise in both frontend and backend integration."
       ],
     },
     {
-      company: "Digital Agency",
-      title: "Web Developer",
-      period: "June 2018 - February 2020",
-      url: "https://example.com",
+      company: "Renzym",
+      title: "CS Intern",
+      period: "05/2023 - 09/2023",
+      location: "Islamabad, Pakistan",
       description: [
-        "Created interactive websites for various clients using JavaScript and CSS frameworks",
-        "Optimized websites for maximum speed and scalability",
-        "Collaborated with creative team to implement visual elements that enhanced user engagement",
-        "Ensured websites were responsive and accessible across all devices",
+        "Gained hands-on experience in Object-Oriented Programming (OOP) with C++ under the mentorship of the Project Manager and company founder.",
+        "Developed user-friendly, efficient, and optimized software solutions focusing on creating intuitive and error-proof interfaces."
       ],
     },
   ];
@@ -60,7 +57,7 @@ const Experience: React.FC = () => {
           <div className="h-px bg-portfolio-white/30 flex-grow"></div>
         </div>
 
-        <Tabs defaultValue={jobs[0].company} className="max-w-3xl">
+        <Tabs defaultValue={jobs[0].company} className="max-w-4xl">
           <TabsList className="bg-transparent border-l border-portfolio-white/30 h-auto flex-col space-x-0 space-y-0 w-full sm:w-auto">
             {jobs.map((job) => (
               <TabsTrigger
@@ -76,20 +73,10 @@ const Experience: React.FC = () => {
             <TabsContent key={job.company} value={job.company} className="mt-8 px-6">
               <h3 className="text-xl font-semibold text-white mb-1">
                 {job.title} 
-                {job.url && (
-                  <a 
-                    href={job.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center ml-2 text-portfolio-highlight hover:text-portfolio-highlight/80"
-                  >
-                    <span className="sr-only">{job.company} website</span>
-                    <ExternalLink size={16} />
-                  </a>
-                )}
                 <span className="text-portfolio-highlight"> @ {job.company}</span>
               </h3>
-              <p className="font-mono text-sm text-portfolio-white/80 mb-4">{job.period}</p>
+              <p className="font-mono text-sm text-portfolio-white/80 mb-2">{job.period}</p>
+              <p className="font-mono text-sm text-portfolio-highlight mb-4">{job.location}</p>
               <ul className="space-y-3">
                 {job.description.map((item, i) => (
                   <li key={i} className="flex gap-2 text-portfolio-white/90">

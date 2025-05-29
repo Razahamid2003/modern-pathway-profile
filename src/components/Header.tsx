@@ -38,7 +38,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container-custom flex items-center justify-between">
-        <div className="text-portfolio-highlight font-mono text-xl">JD</div>
+        <div className="text-portfolio-highlight font-mono text-xl">RH</div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
 
         <div className="hidden md:block">
           <a 
-            href="#resume" 
+            href="mailto:raza.hamid2003@gmail.com" 
             className="btn-primary"
           >
             Resume
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
               ))}
               <li className="mt-6">
                 <a 
-                  href="#resume" 
+                  href="mailto:raza.hamid2003@gmail.com" 
                   className="btn-primary"
                   onClick={toggleMenu}
                 >

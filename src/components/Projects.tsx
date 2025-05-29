@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,47 +16,45 @@ interface Project {
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
-      title: "Personal Portfolio",
-      description: "A sleek, modern portfolio website built with React and Tailwind CSS. Features smooth animations and responsive design.",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com",
-      liveLink: "https://example.com",
+      title: "ColorGrid Multiplayer Game (MERN Stack)",
+      description: "Engineered a full-stack, real-time multiplayer 5x5 board game with matchmaking, turn-based coloring mechanics, persistent scoring, and dynamic leaderboards; built a React frontend (hooks, React Router, Tailwind CSS) and an Express + Socket.IO backend with optimized MongoDB schemas and socket event workflows to achieve <100 ms move latency and a 50% reduction in API response time.",
+      tags: ["React", "Node.js", "Express", "Socket.IO", "MongoDB", "Tailwind CSS"],
+      github: "#",
       featured: true,
     },
     {
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce application with user authentication, product catalog, and payment processing capabilities.",
-      tags: ["Next.js", "MongoDB", "Stripe API"],
-      github: "https://github.com",
+      title: "SmoLLoRA Injector",
+      description: "Integrated Low-Rank Adapters (LoRA) into a 135 M-parameter SmoLLM by augmenting all Q/K/V/O and feed-forward projections with rank-4 adapter modules, slashing trainable parameters by 99% while matching LoRA fine-tuning perplexity on Dolly-15k. Developed a modular PyTorch framework to automate adapter injection, training, validation, and merge-for-inference, and optimized throughput with precomputed causal masks and step-LR scheduling—achieving a 3× speed-up in fine-tuning.",
+      tags: ["PyTorch", "LoRA", "NLP", "Machine Learning", "Transformers"],
+      github: "#",
       featured: true,
     },
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather application that provides real-time forecasts using the OpenWeather API.",
-      tags: ["JavaScript", "React", "Weather API"],
-      github: "https://github.com",
-      liveLink: "https://example.com",
+      title: "Predictive Modeling for Classification and Regression",
+      description: "Implemented Naive Bayes, K-Nearest Neighbors, Logistic Regression, and Neural Networks for diverse datasets, achieving 90%+ accuracy.",
+      tags: ["Python", "Scikit-learn", "Machine Learning", "Data Analysis"],
+      github: "#",
       featured: false,
     },
     {
-      title: "Task Management App",
-      description: "A productivity tool built to help users manage their daily tasks with drag-and-drop capabilities.",
-      tags: ["React", "Redux", "Node.js"],
-      github: "https://github.com",
+      title: "N-Gram Language Model with GPT Principles",
+      description: "Designed and implemented a LLM using N-grams inspired by GPT architecture principles. Developed a scalable Bigram-based text generation model, capable of producing coherent predictions and handling complex language patterns. Optimized performance with efficient training strategies, enhancing model speed and accuracy.",
+      tags: ["Python", "NLP", "GPT", "Language Models", "Machine Learning"],
+      github: "#",
       featured: false,
     },
     {
-      title: "Recipe Finder",
-      description: "An app that lets users search for recipes based on ingredients they have on hand.",
-      tags: ["React", "Food API", "Tailwind CSS"],
-      github: "https://github.com",
+      title: "MERN Blackjack Game",
+      description: "Developed a full-stack Blackjack web app with MongoDB, Express, React, and Node.js; styled with Tailwind CSS, navigated using React Router, CI/CD automated via GitHub Actions, and deployed on Netlify, demonstrating end-to-end full-stack proficiency.",
+      tags: ["MERN Stack", "React", "MongoDB", "Express", "Node.js", "Tailwind CSS"],
+      github: "#",
       featured: false,
     },
     {
-      title: "Fitness Tracker",
-      description: "Mobile-first application for tracking workouts and fitness progress over time.",
-      tags: ["React Native", "Firebase", "Charts.js"],
-      github: "https://github.com",
+      title: "Automated Daily News Sentiment Analysis Pipeline",
+      description: "Spearheaded a Python pipeline using Scrapy, BeautifulSoup, and NLTK VADER to scrape 500+ news articles daily and auto-generate Matplotlib sentiment trend charts, cutting manual reporting time by 90% and delivering real-time media tone insights.",
+      tags: ["Python", "Scrapy", "BeautifulSoup", "NLTK", "Data Analysis", "Automation"],
+      github: "#",
       featured: false,
     },
   ];
@@ -86,7 +85,12 @@ const Projects: React.FC = () => {
                   ? 'md:order-1' 
                   : 'md:order-2'
               }`}>
-                <div className="h-full w-full bg-portfolio-navy rounded"></div>
+                <div className="h-64 w-full bg-portfolio-navy rounded flex items-center justify-center">
+                  <div className="text-portfolio-highlight text-center">
+                    <Folder size={48} className="mx-auto mb-4" />
+                    <p className="font-mono text-sm">Project Preview</p>
+                  </div>
+                </div>
               </div>
               
               <div className={`md:col-span-5 ${
@@ -97,13 +101,13 @@ const Projects: React.FC = () => {
                 <p className="section-title">Featured Project</p>
                 <h3 className="text-2xl font-bold text-portfolio-black mb-4">{project.title}</h3>
                 <div className="bg-white p-6 rounded shadow-xl mb-4 border border-portfolio-navy/10">
-                  <p className="text-portfolio-slate">{project.description}</p>
+                  <p className="text-portfolio-slate text-sm">{project.description}</p>
                 </div>
                 <div className={`flex flex-wrap gap-2 mb-6 ${
                   index % 2 === 0 ? '' : 'md:justify-end'
                 }`}>
                   {project.tags.map(tag => (
-                    <Badge key={tag} className="bg-transparent text-portfolio-slate border border-portfolio-highlight">
+                    <Badge key={tag} className="bg-transparent text-portfolio-slate border border-portfolio-highlight text-xs">
                       {tag}
                     </Badge>
                   ))}
@@ -112,12 +116,12 @@ const Projects: React.FC = () => {
                   index % 2 === 0 ? '' : 'md:justify-end'
                 }`}>
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
+                    <a href={project.github} className="text-portfolio-slate hover:text-portfolio-highlight">
                       <Github size={20} />
                     </a>
                   )}
                   {project.liveLink && (
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
+                    <a href={project.liveLink} className="text-portfolio-slate hover:text-portfolio-highlight">
                       <ExternalLink size={20} />
                     </a>
                   )}
@@ -137,19 +141,19 @@ const Projects: React.FC = () => {
                   <Folder size={32} className="text-portfolio-highlight" />
                   <div className="flex gap-4">
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
+                      <a href={project.github} className="text-portfolio-slate hover:text-portfolio-highlight">
                         <Github size={18} />
                       </a>
                     )}
                     {project.liveLink && (
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
+                      <a href={project.liveLink} className="text-portfolio-slate hover:text-portfolio-highlight">
                         <ExternalLink size={18} />
                       </a>
                     )}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-portfolio-black mb-3">{project.title}</h3>
-                <p className="text-portfolio-slate mb-6">{project.description}</p>
+                <h3 className="text-lg font-bold text-portfolio-black mb-3">{project.title}</h3>
+                <p className="text-portfolio-slate mb-6 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map(tag => (
                     <span key={tag} className="text-xs text-portfolio-slate font-mono">

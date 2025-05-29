@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Phone, MapPin } from "lucide-react";
 
 const Contact: React.FC = () => {
   return (
@@ -17,13 +17,35 @@ const Contact: React.FC = () => {
           <p className="section-title">04. What's Next?</p>
           <h2 className="heading-md text-white">Get In Touch</h2>
           
-          <p className="text-white/80 mb-12">
-            I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+          <p className="text-white/80 mb-8">
+            I'm currently looking for new opportunities in AI/ML and software engineering. 
+            Whether you have a question about my projects or want to discuss potential collaborations,
             I'll do my best to get back to you!
           </p>
           
+          <div className="space-y-6 mb-12">
+            <div className="flex items-center justify-center gap-2 text-white/80">
+              <Phone size={16} />
+              <a href="tel:+923138556157" className="hover:text-portfolio-highlight transition-colors">
+                +92-313-8556157
+              </a>
+            </div>
+            
+            <div className="flex items-center justify-center gap-2 text-white/80">
+              <Mail size={16} />
+              <a href="mailto:raza.hamid2003@gmail.com" className="hover:text-portfolio-highlight transition-colors">
+                raza.hamid2003@gmail.com
+              </a>
+            </div>
+            
+            <div className="flex items-center justify-center gap-2 text-white/80">
+              <MapPin size={16} />
+              <span>Islamabad, Pakistan</span>
+            </div>
+          </div>
+          
           <div className="space-y-6">
-            <a href="mailto:hello@example.com" className="btn-primary bg-transparent inline-block">
+            <a href="mailto:raza.hamid2003@gmail.com" className="btn-primary bg-transparent inline-block">
               Say Hello
             </a>
             
@@ -36,7 +58,7 @@ const Contact: React.FC = () => {
                 <Linkedin size={24} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="mailto:hello@example.com" className="hover:text-portfolio-highlight transition-colors">
+              <a href="mailto:raza.hamid2003@gmail.com" className="hover:text-portfolio-highlight transition-colors">
                 <Mail size={24} />
                 <span className="sr-only">Email</span>
               </a>
