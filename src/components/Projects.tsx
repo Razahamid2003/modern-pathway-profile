@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
       title: "ColorGrid Multiplayer Game (MERN Stack)",
       description: "Engineered a full-stack, real-time multiplayer 5x5 board game with matchmaking, turn-based coloring mechanics, persistent scoring, and dynamic leaderboards; built a React frontend (hooks, React Router, Tailwind CSS) and an Express + Socket.IO backend with optimized MongoDB schemas and socket event workflows to achieve <100 ms move latency and a 50% reduction in API response time.",
       tags: ["React", "Node.js", "Express", "Socket.IO", "MongoDB", "Tailwind CSS"],
-      github: "#",
+      github: "https://github.com/Razahamid2003/LUMS-Projects/tree/main/LUMS%20Projects/Advanced%20Programming%20(CS-300)",
       featured: true,
     },
     {
@@ -116,12 +116,12 @@ const Projects: React.FC = () => {
                   index % 2 === 0 ? '' : 'md:justify-end'
                 }`}>
                   {project.github && (
-                    <a href={project.github} className="text-portfolio-slate hover:text-portfolio-highlight">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                       <Github size={20} />
                     </a>
                   )}
                   {project.liveLink && (
-                    <a href={project.liveLink} className="text-portfolio-slate hover:text-portfolio-highlight">
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                       <ExternalLink size={20} />
                     </a>
                   )}
@@ -141,12 +141,12 @@ const Projects: React.FC = () => {
                   <Folder size={32} className="text-portfolio-highlight" />
                   <div className="flex gap-4">
                     {project.github && (
-                      <a href={project.github} className="text-portfolio-slate hover:text-portfolio-highlight">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                         <Github size={18} />
                       </a>
                     )}
                     {project.liveLink && (
-                      <a href={project.liveLink} className="text-portfolio-slate hover:text-portfolio-highlight">
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-portfolio-slate hover:text-portfolio-highlight">
                         <ExternalLink size={18} />
                       </a>
                     )}

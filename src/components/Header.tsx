@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,53 +21,6 @@ const Header: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleResumeDownload = () => {
-    // Create a downloadable PDF content
-    const resumeContent = `
-RAZA HAMID
-AI/ML Engineer & Computer Science Student
-
-Contact Information:
-Email: raza.hamid2003@gmail.com
-Phone: +92-313-8556157
-Location: Islamabad, Pakistan
-GitHub: https://github.com/Razahamid2003
-LinkedIn: https://linkedin.com/in/raza-hamid
-
-Education:
-BS Computer Sciences (Final Year)
-LUMS - Lahore University of Management Sciences
-Expected Graduation: 2025
-
-Experience:
-AI Intern - LMKR (June 2024 - August 2024)
-• Architected domain-specific LLM pipelines
-• Built scalable MLOps workflows
-• Developed AI model deployment solutions
-
-Technical Skills:
-Programming Languages: Python (expert), C++ (expert), C# (intermediate), SQL (intermediate), Haskell (intermediate), TypeScript (intermediate), JavaScript (intermediate)
-AI/ML Libraries: TensorFlow, PyTorch, scikit-learn, Hugging Face, Keras, NLTK, Gensim, ONNX
-Data Analysis: Pandas, NumPy, Matplotlib, Seaborn, OpenCV
-Platforms: Docker, Kubernetes, Kaggle, Git, MLFlow, Streamlit
-
-Featured Projects:
-1. ColorGrid Multiplayer Game (MERN Stack)
-2. Automated Daily News Sentiment Analysis Pipeline
-3. N-Gram Language Model with GPT Principles
-    `;
-
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Raza_Hamid_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -104,13 +57,15 @@ Featured Projects:
         </nav>
 
         <div className="hidden md:block">
-          <button 
-            onClick={handleResumeDownload}
+          <a 
+            href="https://drive.google.com/file/d/1WWbQ9-0nikMsrWo1LpeV-wuCsmkT1Kzg/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2"
           >
-            <Download size={16} />
+            <ExternalLink size={16} />
             Resume
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -140,16 +95,16 @@ Featured Projects:
                 </li>
               ))}
               <li className="mt-6">
-                <button 
-                  onClick={() => {
-                    handleResumeDownload();
-                    toggleMenu();
-                  }}
+                <a 
+                  href="https://drive.google.com/file/d/1WWbQ9-0nikMsrWo1LpeV-wuCsmkT1Kzg/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary inline-flex items-center gap-2"
+                  onClick={toggleMenu}
                 >
-                  <Download size={16} />
+                  <ExternalLink size={16} />
                   Resume
-                </button>
+                </a>
               </li>
             </ul>
           </nav>
