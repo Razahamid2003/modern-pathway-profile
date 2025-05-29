@@ -1,8 +1,55 @@
 
 import React from "react";
-import { Github, Linkedin, Mail, FileText, Phone, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, Phone, MapPin, Download } from "lucide-react";
 
 const Contact: React.FC = () => {
+  const handleResumeDownload = () => {
+    // Create a downloadable PDF content
+    const resumeContent = `
+RAZA HAMID
+AI/ML Engineer & Computer Science Student
+
+Contact Information:
+Email: raza.hamid2003@gmail.com
+Phone: +92-313-8556157
+Location: Islamabad, Pakistan
+GitHub: https://github.com/Razahamid2003
+LinkedIn: https://linkedin.com/in/raza-hamid
+
+Education:
+BS Computer Sciences (Final Year)
+LUMS - Lahore University of Management Sciences
+Expected Graduation: 2025
+
+Experience:
+AI Intern - LMKR (June 2024 - August 2024)
+• Architected domain-specific LLM pipelines
+• Built scalable MLOps workflows
+• Developed AI model deployment solutions
+
+Technical Skills:
+Programming Languages: Python (expert), C++ (expert), C# (intermediate), SQL (intermediate), Haskell (intermediate), TypeScript (intermediate), JavaScript (intermediate)
+AI/ML Libraries: TensorFlow, PyTorch, scikit-learn, Hugging Face, Keras, NLTK, Gensim, ONNX
+Data Analysis: Pandas, NumPy, Matplotlib, Seaborn, OpenCV
+Platforms: Docker, Kubernetes, Kaggle, Git, MLFlow, Streamlit
+
+Featured Projects:
+1. ColorGrid Multiplayer Game (MERN Stack)
+2. Automated Daily News Sentiment Analysis Pipeline
+3. N-Gram Language Model with GPT Principles
+    `;
+
+    const blob = new Blob([resumeContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Raza_Hamid_Resume.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <section id="contact" className="py-24 bg-portfolio-navy relative overflow-hidden">
       {/* Marble-inspired decorative elements */}
@@ -50,11 +97,11 @@ const Contact: React.FC = () => {
             </a>
             
             <div className="pt-8 flex justify-center gap-8 text-white">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-highlight transition-colors">
+              <a href="https://github.com/Razahamid2003" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-highlight transition-colors">
                 <Github size={24} />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-highlight transition-colors">
+              <a href="https://linkedin.com/in/raza-hamid" target="_blank" rel="noopener noreferrer" className="hover:text-portfolio-highlight transition-colors">
                 <Linkedin size={24} />
                 <span className="sr-only">LinkedIn</span>
               </a>
@@ -62,10 +109,10 @@ const Contact: React.FC = () => {
                 <Mail size={24} />
                 <span className="sr-only">Email</span>
               </a>
-              <a href="#resume" className="hover:text-portfolio-highlight transition-colors">
+              <button onClick={handleResumeDownload} className="hover:text-portfolio-highlight transition-colors">
                 <FileText size={24} />
                 <span className="sr-only">Resume</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>

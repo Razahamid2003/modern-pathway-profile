@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
             Currently seeking a summer internship to innovate in generative AI, reinforcement learning, 
             and predictive analytics at a leading tech company.
           </p>
-          <a href="#projects" className="btn-primary inline-flex items-center gap-2 group">
+          <a href="https://github.com/Razahamid2003" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center gap-2 group">
             View my work
             <ArrowRight size={16} className="transform transition-transform group-hover:translate-x-1" />
           </a>

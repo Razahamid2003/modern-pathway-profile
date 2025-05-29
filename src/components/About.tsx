@@ -123,9 +123,9 @@ const About: React.FC = () => {
               <div className="absolute inset-0 border-2 border-portfolio-highlight rounded translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
               <div className="w-full h-full bg-white overflow-hidden rounded">
                 <img 
-                  src="/lovable-uploads/6206f25f-95a8-4a7f-8452-26d9fade913c.png" 
+                  src="/lovable-uploads/25ea077a-5adf-41dd-a31a-44ebe7808ebd.png" 
                   alt="Raza Hamid" 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
