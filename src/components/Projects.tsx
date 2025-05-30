@@ -32,6 +32,7 @@ const Projects: React.FC = () => {
       tags: ["Python", "Scrapy", "BeautifulSoup", "NLTK", "Data Analysis", "Automation"],
       github: "https://github.com/Razahamid2003/LUMS-Projects/tree/main/LUMS%20Projects/Machine%20Learning%20(CS-438)/News%20Sentiment%20Analysis",
       featured: true,
+      detailsPath: "/project/news-sentiment",
     },
     {
       title: "N-Gram Language Model with GPT Principles",
