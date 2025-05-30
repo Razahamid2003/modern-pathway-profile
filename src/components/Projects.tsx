@@ -40,6 +40,7 @@ const Projects: React.FC = () => {
       tags: ["Python", "NLP", "GPT", "Language Models", "Machine Learning"],
       github: "https://github.com/Razahamid2003/LMKR-Projects",
       featured: true,
+      detailsPath: "/project/gpt-language-model",
     },
     {
       title: "SmoLLoRA Injector",

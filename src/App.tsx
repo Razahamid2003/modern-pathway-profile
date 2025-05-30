@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ColorGridProject from "./pages/ColorGridProject";
 import NewsSentimentProject from "./pages/NewsSentimentProject";
+import GPTLanguageModelProject from "./pages/GPTLanguageModelProject";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/project/colorgrid" element={<ColorGridProject />} />
           <Route path="/project/news-sentiment" element={<NewsSentimentProject />} />
+          <Route path="/project/gpt-language-model" element={<GPTLanguageModelProject />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
