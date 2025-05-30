@@ -9,7 +9,7 @@ const ColorGridProject = () => {
 
   return (
     <div className="bg-white min-h-screen relative">
-      {/* Enhanced decorative elements */}
+      {/* Enhanced decorative elements matching main site */}
       <div className="fixed inset-0 pointer-events-none z-0 opacity-5">
         <div className="absolute top-0 right-0 h-96 w-96 bg-portfolio-highlight rounded-bl-full"></div>
         <div className="absolute bottom-0 left-0 h-96 w-96 bg-portfolio-navy rounded-tr-full"></div>
